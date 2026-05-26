@@ -61,7 +61,7 @@ async function sendWhatsApp(to, message) {
 }
 
 app.post("/webhook", async (req, res) => {
-  res.sendStatus(200);
+  res.status(200).send(''); // Respond to Twilio immediately
   const from = req.body.From;
   const body = req.body.Body?.trim() || "";
   const mediaUrl = req.body.MediaUrl0;
