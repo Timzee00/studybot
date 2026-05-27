@@ -37,7 +37,7 @@ When a student says "I have exam tomorrow" or "exam rush", automatically:
 Always end responses with a helpful follow-up suggestion.`;
 
 async function askGemini(userMessage, imageBase64 = null, mimeType = null) {
-  const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
+  const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
   let parts = [];
   if (imageBase64) {
     parts.push({ inlineData: { data: imageBase64, mimeType: mimeType || "image/jpeg" } });
